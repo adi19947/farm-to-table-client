@@ -1,14 +1,15 @@
 import React from "react";
 import { MenuProvider } from "../../context/MenuProvider";
 import NavBar from "./topNavBar/NavBar";
+import { Box } from "@mui/material";
 
 const Header: React.FC = () => {
   return (
-    <div>
+    <Box>
       <MenuProvider>
         <NavBar />
       </MenuProvider>
-    </div>
+    </Box>
   );
 };
 
