@@ -1,6 +1,6 @@
 import Joi from "joi";
 
-const loginSchema = Joi.object({
+const loginSchema: Joi.Schema = Joi.object({
   email: Joi.string()
     .pattern(/^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/)
     .message("Please enter a valid email")

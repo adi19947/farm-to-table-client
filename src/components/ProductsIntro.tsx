@@ -19,7 +19,7 @@ const ProductsIntro: React.FC<IntroProps> = ({ products }) => {
       <Typography
         variant="h3"
         component="h2"
-        sx={{ textDecoration: "underline", mt: 5, mb: 10, color: "white" }}
+        sx={{ textDecoration: "underline", mt: 5, mb: 5, color: "white" }}
       >
         OUR PRODUCTS
       </Typography>

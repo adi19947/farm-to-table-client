@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import ROUTES from "../../../../routes/routesModel";
 import NavItem from "../../../../routes/components/NavItem";
 import SearchBar from "../search-bar/SearchBar";
+import CartIcon from "./CartIcon";
 
 const LeftNavBar: React.FC = () => {
   const { user } = useUser();
@@ -25,7 +26,7 @@ const LeftNavBar: React.FC = () => {
         }}
       >
         {!hideSearchBar && <SearchBar />}
-        <NavItem to={ROUTES.ABOUT} label="OUR STORY" />
+        <CartIcon />
         {user && <NavItem to={ROUTES.PRODUCTS} label="PRODUCTS" />}
         {user && <NavItem to={ROUTES.FAV_PRODUCTS} label="favorites" />}
         {user && <NavItem to={ROUTES.MY_CART} label="MY Cards" />}

@@ -7,10 +7,18 @@ import LogoIcon from "./logo/LogIcon";
 
 import NavItem from "../../../routes/components/NavItem";
 import ROUTES from "../../../routes/routesModel";
+import { useTheme } from "../../../context/ThemeProvider";
 
 const NavBar: React.FC = () => {
+  const { isDark } = useTheme();
+  console.log(isDark);
+
   return (
-    <AppBar position="sticky" sx={{ color: "white" }} elevation={10}>
+    <AppBar
+      position="sticky"
+      sx={{ color: "white", bgcolor: isDark ? "black" : "#ff5722" }}
+      elevation={10}
+    >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <LeftNavBar />
         <LogoIcon />
@@ -31,8 +39,10 @@ const NavBar: React.FC = () => {
         }}
       >
         <NavItem to={ROUTES.ABOUT} label="vegetables" />
+
         <NavItem to={ROUTES.PRODUCTS} label="fruits" />
         <NavItem to={ROUTES.PRODUCTS} label="meat" />
+        <NavItem to={ROUTES.ABOUT} label="our story" />
       </Toolbar>
     </AppBar>
   );

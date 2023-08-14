@@ -2,7 +2,7 @@ import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import React, { useState, ChangeEvent } from "react";
-import { useCardsContext } from "../../../../providers/CardsProvider";
+
 import { useSearchParams } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
